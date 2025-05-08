@@ -1,0 +1,91 @@
+.footer {
+    background-color: #05122d;
+    color: #eee;
+    padding: 2rem 1rem 4rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: circle;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    padding-left: 100px;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-section ul li a:hover {
+    color: #3498db;
+}
+
+
+@media (max-width: 750px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: start;
+        gap: 0rem;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        align-items: start;
+    }
+
+    .quick-links ul {
+        padding-left: 2rem;
+    }
+
+    .connect-us{
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-info li {
+        padding-left: 0;
+    }
+}
