@@ -1,7 +1,7 @@
 import { Carousel} from 'antd';
-import restaurantImg from '../assets/restaurant.png';
-import luggageImg from '../assets/luggage.png';
-import deckImg from '../assets/deck.png';
+import restaurantImg from '../assets/restaurant.webp';
+import luggageImg from '../assets/luggage.webp';
+import deckImg from '../assets/deck.webp';
 import './WorkCards.css';
 
 const carouselImages = [restaurantImg, luggageImg, deckImg];

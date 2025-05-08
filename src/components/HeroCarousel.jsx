@@ -1,7 +1,7 @@
 import { Carousel, ConfigProvider } from 'antd';
-import restaurantImage from '../assets/restaurant.png';
-import luggageImage from '../assets/luggage.png';
-import deckImage from '../assets/deck.png';
+import restaurantImage from '../assets/restaurant.webp';
+import luggageImage from '../assets/luggage.webp';
+import deckImage from '../assets/deck.webp';
 import './HeroCarousel.css';
 
 const carouselThemeOverrides = {
