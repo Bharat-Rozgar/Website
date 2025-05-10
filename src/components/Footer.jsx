@@ -3,26 +3,15 @@ import './Footer.css';
 
 function Footer() {
 
-    const navigate = useNavigate();
-    const navigateToContact = () => {
-        navigate("/");
-        setTimeout(() => {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
-        }
-        }, 100);
-    }
 
     return (
-        <footer className="footer">
+        <footer className="footer" id='footer'>
             <div className="footer-container">
                 <div className="footer-section quick-links">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/work">Work</a></li>
-                        <li><a onClick={navigateToContact}>Contact</a></li>
                     </ul>
                 </div>
                 <div className="footer-section connect-us">

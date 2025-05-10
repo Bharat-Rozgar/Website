@@ -12,7 +12,6 @@ function Homepage() {
             <Navbar/>
             <HeroCarousel/>
             <Content/>
-            <Contact/>
             <Footer/>
         </>
     )

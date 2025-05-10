@@ -36,6 +36,7 @@
   }
   
   .offer-form-container  input[type="text"],
+  .offer-form-container  input[type="number"]
   .offer-form-container input[type="email"],
   .offer-form-container input[type="date"] {
     padding: 0.75rem;
@@ -43,6 +44,19 @@
     border-radius: 8px;
     font-size: 0.8rem;
     transition: border 0.2s;
+  }
+
+  .offer-form-container select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    background-color: #f6f7f8;
+    color: rgb(119, 119, 119);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: border 0.2s;
+
+
   }
   
   .offer-form-container input:focus {
@@ -71,6 +85,8 @@
   .offer-form-container .submit-btn:hover {
     background-color: #2980b9;
   }
+
+
   
 
   .order-summary {

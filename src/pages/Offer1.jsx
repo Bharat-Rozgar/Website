@@ -52,7 +52,7 @@ function Offer1() {
                     <div className="form-row">
                     <div className="form-group">
                         <label>Phone Number</label>
-                        <input type="text" placeholder="Enter Phone Number" />
+                        <input type="number" placeholder="Enter Phone Number" />
                     </div>
                     <div className="form-group">
                         <label>Email Address *</label>
@@ -80,6 +80,24 @@ function Offer1() {
                         <label>Country / Region *</label>
                         <input type="text" defaultValue="India" />
                     </div>
+                    </div>
+
+                    <h2>Education Details</h2>
+
+                    <div className="form-row">
+                    <div className="form-group">
+                        <label>10th board *</label>
+                        <input type="text" placeholder='Enter your board in 10th here' />
+                    </div>
+                    <div className="form-group">
+                        <label>10th pass year *</label>
+                        <input type="text" placeholder='Enter the year you passed 10th here' />
+                    </div>
+                    </div>
+
+                    <div className="form-group full-width">
+                    <label>10th percentage *</label>
+                    <input type="text" placeholder="Enter the percentage scored in 10th" />
                     </div>
 
 

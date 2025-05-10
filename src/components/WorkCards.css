@@ -10,16 +10,10 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: #2c3e50;
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
-.work-underline {
-    width: 150px;
-    height: 4px;
-    background-color: #3498db;
     margin: 0 auto 2rem auto;
-    border-radius: 2px;
+    position: relative;
+    text-decoration: underline #3498db solid 3px;
+    text-underline-offset: 10px;
 }
 
 .work-card-wrapper {
@@ -48,6 +42,10 @@
 
 .work-content h2{
     margin: 5%;
+}
+
+.work-content ul li a {
+    color: purple
 }
 
 .work-button {

@@ -52,7 +52,7 @@ function Offer3() {
                     <div className="form-row">
                     <div className="form-group">
                         <label>Phone Number</label>
-                        <input type="text" placeholder="Enter Phone Number" />
+                        <input type="number" placeholder="Enter Phone Number" />
                     </div>
                     <div className="form-group">
                         <label>Email Address *</label>
@@ -81,6 +81,25 @@ function Offer3() {
                         <input type="text" defaultValue="India" />
                     </div>
                     </div>
+
+                    <h2>Technical Details</h2>
+
+                    <div className="form-row">
+                    <div className="form-group">
+                        <label>I.T.I. pass year *</label>
+                        <input type="text" placeholder='Enter the year you passed 12th here' />
+                    </div>
+                    <div className="form-group">
+                        <label>I.T.I. percentage *</label>
+                        <input type="text" placeholder='Enter the percentage score in I.T.I.' />
+                    </div>
+                    </div>
+
+                    <div className="form-group full-width">
+                    <label>I.T.I. stream/specialization *</label>
+                    <input type="text" placeholder="Enter your I.T.I. course specialization" />
+                    </div>
+
 
                     <div class="order-summary">
                         <table class="summary-table">

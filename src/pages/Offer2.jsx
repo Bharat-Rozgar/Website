@@ -52,7 +52,7 @@ function Offer2() {
                     <div className="form-row">
                     <div className="form-group">
                         <label>Phone Number</label>
-                        <input type="text" placeholder="Enter Phone Number" />
+                        <input type="number" placeholder="Enter Phone Number" />
                     </div>
                     <div className="form-group">
                         <label>Email Address *</label>
@@ -81,6 +81,37 @@ function Offer2() {
                         <input type="text" defaultValue="India" />
                     </div>
                     </div>
+
+                    <h2>Education Details</h2>
+
+                    <div className="form-row">
+                    <div className="form-group">
+                        <label>12th board *</label>
+                        <input type="text" placeholder='Enter your board in 12th here' />
+                    </div>
+                    <div className="form-group">
+                        <label>12th pass year *</label>
+                        <input type="text" placeholder='Enter the year you passed 12th here' />
+                    </div>
+                    </div>
+
+
+                    <div className="form-row">
+                    <div className="form-group">
+                        <label>12th percentage *</label>
+                        <input type="text" placeholder='Enter the percentage scored in 12th' />
+                    </div>
+                    <div className="form-group">
+                        <label>12th stream *</label>
+                        <select name="stream" id="stream" required>
+                            <option value="">Please choose your stream </option>
+                            <option value="science">Science</option>
+                            <option value="commerce">Commerce</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </div>
+                    </div>
+
 
                     <div class="order-summary">
                         <table class="summary-table">

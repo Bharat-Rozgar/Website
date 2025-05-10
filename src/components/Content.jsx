@@ -15,7 +15,7 @@ function Content() {
             <h3 className='content-heading'>पदों का विवरण</h3>
             <div className='content'>
                 <ul className='content-list'>
-                    <li><strong>10th &nbsp;</strong> क्लास के कुल पद – <strong>7200</strong></li>
+                    <li><strong>10th &nbsp;</strong> के कुल पद – <strong>7200</strong></li>
                     <li><strong>12th &nbsp;</strong> के कुल पद – <strong>3405</strong></li>
                     <li>  <strong>I.T.I. &nbsp;</strong> के कुल पद – <strong>4820</strong></li>
                 </ul>

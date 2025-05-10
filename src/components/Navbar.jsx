@@ -9,7 +9,7 @@ function Navbar() {
     const navigateToContact = () => {
         navigate("/");
         setTimeout(() => {
-        const contactSection = document.getElementById("contact");
+        const contactSection = document.getElementById("footer");
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: "smooth" });
         }
