@@ -40,7 +40,7 @@ function WorkCards() {
                             <li>कुल पद – <strong>7200</strong></li>
                             <li><strong>नोट: रहना व खाना क्रूज जहाज का रहेगा।</strong></li>
                             <li>
-                                <a href="pdf1.pdf" download="pdf1.pdf">Download the work offer</a>
+                                <a href="10th.pdf" download="10th.pdf">Download the work offer</a>
                             </li>
                         </ul>
                         <a href='/offer1'><button className='work-button'>आवेदन करें</button></a>
@@ -67,7 +67,7 @@ function WorkCards() {
                             <li>कुल पद – <strong>3405</strong></li>
                             <li><strong>नोट: रहना व खाना क्रूज जहाज का रहेगा।</strong></li>
                             <li>
-                                <a href="pdf1.pdf" download="pdf1.pdf">Download the work offer</a>
+                                <a href="12th.pdf" download="12th.pdf">Download the work offer</a>
                             </li>
                         </ul>
                         <a href='/offer2'><button className='work-button'>आवेदन करें</button></a>
@@ -94,7 +94,7 @@ function WorkCards() {
                             <li>कुल पद – <strong>4820</strong></li>
                             <li><strong>नोट: रहना व खाना क्रूज जहाज का रहेगा।</strong></li>
                             <li>
-                                <a href="pdf1.pdf" download="pdf1.pdf">Download the work offer</a>
+                                <a href="ITI.pdf" download="ITI.pdf">Download the work offer</a>
                             </li>
                         </ul>
                         <a href='/offer3'><button className='work-button'>आवेदन करें</button></a>

@@ -1,157 +1,181 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import './Offer1.css';
+import './Offer.css';
 
 function Offer2() {
-    return (
-        <>
-            <Navbar />
-            <div className="offer-form-container">
-                <form className="styled-form">
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>First Name *</label>
-                        <input type="text" placeholder="Enter First Name" autofocus="autofocus" />
-                    </div>
-                    <div className="form-group">
-                        <label>Last Name *</label>
-                        <input type="text" placeholder="Enter Last Name"/>
-                    </div>
-                    </div>
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    fatherName: '',
+    motherName: '',
+    gender: '',
+    dob: '',
+    address: '',
+    phone: '',
+    email: '',
+    city: '',
+    postcode: '',
+    state: '',
+    country: 'India',
+    board12: '',
+    passingYear12: '',
+    percentage12: '',
+    stream: '',
+  });
 
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>Father Name *</label>
-                        <input type="text" placeholder="Enter your Father's Name" />
-                    </div>
-                    <div className="form-group">
-                        <label>Mother Name *</label>
-                        <input type="text" placeholder="Enter your Mother's Name" />
-                    </div>
-                    </div>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>Gender *</label>
-                        <div className="radio-group">
-                        <label><input type="radio" name="gender" /> Male</label>
-                        <label><input type="radio" name="gender" /> Female</label>
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <label>Date of Birth *</label>
-                        <input type="date" />
-                    </div>
-                    </div>
+  const handleNext = (e) => {
+    e.preventDefault();
 
-                    <div className="form-group full-width">
-                    <label>Address *</label>
-                    <input type="text" placeholder="House number and street name" />
-                    </div>
+    // Simple required field validation
+    const requiredFields = [
+      'firstName', 'lastName', 'fatherName', 'motherName', 'gender', 'dob',
+      'address', 'email', 'city', 'postcode', 'state', 'board12',
+      'passingYear12', 'percentage12', 'stream'
+    ];
 
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>Phone Number</label>
-                        <input type="number" placeholder="Enter Phone Number" />
-                    </div>
-                    <div className="form-group">
-                        <label>Email Address *</label>
-                        <input type="email" placeholder="Enter Email Address" />
-                    </div>
-                    </div>
+    for (const field of requiredFields) {
+      if (!formData[field]) {
+        alert('Please fill all required fields');
+        return;
+      }
+    }
 
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>Town / City *</label>
-                        <input type="text" placeholder='Enter your city here'/>
-                    </div>
-                    <div className="form-group">
-                        <label>Postcode / ZIP *</label>
-                        <input type="text" placeholder='Enter your pincode here'/>
-                    </div>
-                    </div>
+    navigate('/payment2', { state: formData });
+  };
 
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>State / County *</label>
-                        <input type="text" placeholder='Enter your state here' />
-                    </div>
-                    <div className="form-group">
-                        <label>Country / Region *</label>
-                        <input type="text" defaultValue="India" />
-                    </div>
-                    </div>
+  return (
+    <>
+      <Navbar />
+      <div className="offer-form-container">
+        <form className="styled-form" onSubmit={handleNext}>
+          <h2>Personal Details</h2>
 
-                    <h2>Education Details</h2>
-
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>12th board *</label>
-                        <input type="text" placeholder='Enter your board in 12th here' />
-                    </div>
-                    <div className="form-group">
-                        <label>12th pass year *</label>
-                        <input type="text" placeholder='Enter the year you passed 12th here' />
-                    </div>
-                    </div>
-
-
-                    <div className="form-row">
-                    <div className="form-group">
-                        <label>12th percentage *</label>
-                        <input type="text" placeholder='Enter the percentage scored in 12th' />
-                    </div>
-                    <div className="form-group">
-                        <label>12th stream *</label>
-                        <select name="stream" id="stream" required>
-                            <option value="">Please choose your stream </option>
-                            <option value="science">Science</option>
-                            <option value="commerce">Commerce</option>
-                            <option value="arts">Arts</option>
-                        </select>
-                    </div>
-                    </div>
-
-
-                    <div class="order-summary">
-                        <table class="summary-table">
-                            <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Subtotal</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>12th कक्षा × 1</td>
-                                <td>₹58.00</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Subtotal</strong></td>
-                                <td><strong>₹58.00</strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Shipping</strong></td>
-                                <td>Free shipping</td>
-                            </tr>
-                            <tr class="total-row">
-                                <td><strong>Total</strong></td>
-                                <td><strong>₹58.00</strong></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div className="form-group full-width">
-                    <button type="submit" className="submit-btn">Submit Application</button>
-                    </div>
-
-                </form>
+          <div className="form-row">
+            <div className="form-group">
+              <label>First Name *</label>
+              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter First Name" required />
             </div>
+            <div className="form-group">
+              <label>Last Name *</label>
+              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter Last Name" required />
+            </div>
+          </div>
 
-            <Footer />
-        </>
-    )
+          <div className="form-row">
+            <div className="form-group">
+              <label>Father Name *</label>
+              <input type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} placeholder="Enter Father's Name" required />
+            </div>
+            <div className="form-group">
+              <label>Mother Name *</label>
+              <input type="text" name="motherName" value={formData.motherName} onChange={handleChange} placeholder="Enter Mother's Name" required />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>Gender *</label>
+              <div className="radio-group">
+                <label>
+                  <input type="radio" name="gender" value="Male" checked={formData.gender === 'Male'} onChange={handleChange} /> Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="Female" checked={formData.gender === 'Female'} onChange={handleChange} /> Female
+                </label>
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Date of Birth *</label>
+              <input type="date" name="dob" value={formData.dob} onChange={handleChange} required />
+            </div>
+          </div>
+
+          <div className="form-group full-width">
+            <label>Address *</label>
+            <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Enter your Address here" required />
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>Phone Number</label>
+              <input type="text" name="phone" value={formData.phone} placeholder="Enter your phone no." onChange={handleChange} />
+            </div>
+            <div className="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email here" required />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>Town / City *</label>
+              <input type="text" name="city" value={formData.city} onChange={handleChange} placeholder="Enter your city here" required />
+            </div>
+            <div className="form-group">
+              <label>Postcode / ZIP *</label>
+              <input type="text" name="pincode" value={formData.pincode} onChange={handleChange} placeholder="Enter your postcode here" required />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>State / County *</label>
+              <input type="text" name="state" value={formData.state} onChange={handleChange} placeholder="Enter your state here" required />
+            </div>
+            <div className="form-group">
+              <label>Country / Region *</label>
+              <input type="text" name="country" value={formData.country} onChange={handleChange} required />
+            </div>
+          </div>
+
+          <h2>Education Details</h2>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>12th Board *</label>
+              <input type="text" name="board12" value={formData.board12} onChange={handleChange} placeholder="Enter your board name" required />
+            </div>
+            <div className="form-group">
+              <label>Passing Year *</label>
+              <input type="text" name="passingYear12" value={formData.passingYear12} onChange={handleChange} placeholder="Enter your passing year" required />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label>Percentage *</label>
+              <input type="text" name="percentage12" value={formData.percentage12} onChange={handleChange} placeholder="Enter your percentage" required />
+            </div>
+            <div className="form-group">
+              <label>Stream *</label>
+              <select name="stream" value={formData.stream} onChange={handleChange} required>
+                <option value="">Please choose your stream</option>
+                <option value="Science">Science</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Arts">Arts</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="form-group full-width">
+            <button type="submit" className="submit-btn">Next</button>
+          </div>
+        </form>
+      </div>
+      <Footer />
+    </>
+  );
 }
 
 export default Offer2;

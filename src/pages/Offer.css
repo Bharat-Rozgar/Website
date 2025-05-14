@@ -70,7 +70,7 @@
     margin-top: 0.25rem;
   }
   
-  .offer-form-container .submit-btn {
+  .submit-btn {
     padding: 0.75rem 1.5rem;
     background-color: #3498db;
     color: white;
@@ -82,54 +82,10 @@
     transition: background 0.3s;
   }
   
-  .offer-form-container .submit-btn:hover {
+  .submit-btn:hover {
     background-color: #2980b9;
   }
 
-
-  
-
-  .order-summary {
-    max-width: 600px;
-    margin: 2rem auto;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .summary-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  
-  .summary-table th,
-  .summary-table td {
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .summary-table th {
-    background-color: #f8f8f8;
-    font-weight: 600;
-  }
-  
-  .summary-table tr:last-child td {
-    border-bottom: none;
-  }
-  
-  .summary-table tr:hover {
-    background-color: #f9f9f9;
-  }
-  
-  .total-row {
-    background-color: #f0f8ff;
-    font-weight: bold;
-    color: #2c3e50;
-  }
-  
 
   
   @media (max-width: 768px) {

@@ -15,11 +15,10 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="footer-section connect-us">
-                    <h3>Connect With Us</h3>
+                    <h3>Contact</h3>
                     <ul className="contact-info">
-                        <li><span className="icon" role="img" aria-label="Location">📍</span> 123 Cruise St, Mumbai, India</li>
-                        <li><span className="icon" role="img" aria-label="Phone">📞</span> +91 98765 43210</li>
-                        <li><span className="icon" role="img" aria-label="Email">✉️</span> info@cruiseemployment.in</li>
+                        <li><span className="icon" role="img" aria-label="Phone">📞</span> +91 94627 31738</li>
+                        <li><span className="icon" role="img" aria-label="Email">✉️</span> bharatrozgar2@gmail.com</li>
                     </ul>
                 </div>
             </div>

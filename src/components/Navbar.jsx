@@ -7,11 +7,10 @@ function Navbar() {
 
     const navigate = useNavigate();
     const navigateToContact = () => {
-        navigate("/");
         setTimeout(() => {
-        const contactSection = document.getElementById("footer");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
+        const footer = document.getElementById("footer");
+        if (footer) {
+            footer.scrollIntoView({ behavior: "smooth" });
         }
         }, 100);
     }
