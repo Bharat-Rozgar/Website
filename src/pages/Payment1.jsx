@@ -12,50 +12,27 @@ function Payment1() {
   const [transactionId, setTransactionId] = useState('');
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (!userData || typeof userData !== 'object' || Array.isArray(userData)) {
-      alert('Invalid user data. Please fill the form again.');
-      navigate('/work');
-    }
-  }, [userData, navigate]);
+    useEffect(() => {
+        if (!userData || typeof userData !== 'object' || Array.isArray(userData)) {
+        alert('Invalid user data. Please fill the form again.');
+        navigate('/work');
+        }
+    }, [userData, navigate]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    if (!transactionId.trim()) {
-      alert('Please enter the UTR / Transaction ID.');
-      return;
-    }
+        if (!transactionId.trim()) {
+        alert('Please enter the UTR / Transaction ID.');
+        return;
+        }
 
-    const finalData = {
-      ...userData,
-      transactionId: transactionId.trim()
+        setLoading(true);
+
+        navigate('/thank'); 
+
+        setLoading(false);
     };
-
-    setLoading(true);
-
-    try {
-      const res = await fetch('https://your-backend-domain/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(finalData),
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        alert('Form submitted successfully! We will contact you soon.');
-        navigate('/work'); 
-      } else {
-        alert('There was an error submitting the form. Please contact support.');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Something went wrong. Please try again later. Please contact support.');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <>
