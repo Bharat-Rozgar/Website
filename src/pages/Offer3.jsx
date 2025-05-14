@@ -122,7 +122,7 @@ function Offer3() {
             </div>
             <div className="form-group">
               <label>Postcode / ZIP *</label>
-              <input type="text" name="postcode" value={formData.pincode} onChange={handleChange} placeholder="Enter your postcode here" required />
+              <input type="text" name="postcode" value={formData.postcode} onChange={handleChange} placeholder="Enter your postcode here" required />
             </div>
           </div>
 
