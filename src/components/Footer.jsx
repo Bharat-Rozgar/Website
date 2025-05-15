@@ -17,7 +17,8 @@ function Footer() {
                 <div className="footer-section connect-us">
                     <h3>Contact</h3>
                     <ul className="contact-info">
-                        <li><span className="icon" role="img" aria-label="Phone">📞</span> +91 94627 31738</li>
+                        <li><span className="icon" role="img" aria-label="Phone">📍</span>Belapur East, Sector 12, CBD</li>
+                        <li><span className="icon" aria-label="Phone"></span>Navi Mumbai, Maharashtra, Pin: 400641</li>
                         <li><span className="icon" role="img" aria-label="Email">✉️</span> bharatrozgar2@gmail.com</li>
                     </ul>
                 </div>

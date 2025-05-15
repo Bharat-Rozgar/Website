@@ -130,7 +130,7 @@ function Offer2() {
 
           <div className="form-row">
             <div className="form-group">
-              <label>State / County *</label>
+              <label>State *</label>
               <input type="text" name="state" value={formData.state} onChange={handleChange} placeholder="Enter your state here" required />
             </div>
             <div className="form-group">
