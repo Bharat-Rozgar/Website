@@ -13,8 +13,8 @@ function ThankYou() {
           </div>
           
         </div>
-        <h1>Payment Successful</h1>
-        <p>We will contact you shortly.</p>
+        <h1>Application Received.</h1>
+        <p>Selected candidates will be contacted through the mail id.</p>
       </div>
       <Footer />
     </>

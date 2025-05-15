@@ -44,12 +44,11 @@ function Payment1() {
           <div className="order-summary">
             <table className="summary-table">
               <thead>
-                <tr><th>Product</th><th>Subtotal</th></tr>
+                <tr><th>Application fees</th><th>Subtotal</th></tr>
               </thead>
               <tbody>
-                <tr><td>10th कक्षा × 1</td><td>₹58.00</td></tr>
+                <tr><td>10th</td><td>₹58.00</td></tr>
                 <tr><td><strong>Subtotal</strong></td><td><strong>₹58.00</strong></td></tr>
-                <tr><td><strong>Shipping</strong></td><td>Free</td></tr>
                 <tr className="total-row"><td><strong>Total</strong></td><td><strong>₹58.00</strong></td></tr>
               </tbody>
             </table>
