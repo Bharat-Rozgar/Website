@@ -7,6 +7,8 @@ import Payment1 from './pages/Payment1.jsx'
 import Payment2 from './pages/Payment2.jsx'
 import Payment3 from './pages/Payment3.jsx'
 import Thank from './pages/Thank.jsx'
+import Privacy from './pages/Privacy.jsx' 
+import Terms from './pages/Terms.jsx'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css'
 
@@ -26,6 +28,8 @@ function App() {
         <Route path="/payment3" element={<Payment3 />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/thank" element={<Thank />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </Router>
     

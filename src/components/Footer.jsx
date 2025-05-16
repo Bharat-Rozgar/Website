@@ -12,6 +12,8 @@ function Footer() {
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/work">Work</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div className="footer-section connect-us">
